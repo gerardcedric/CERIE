@@ -518,5 +518,89 @@ body {
 #mentions-legales h2 {
   text-align: center;
 }
+/* ============ TITRES PREMIUM ============ */
+
+/* Variables utiles (si tu n'as pas déjà un :root) */
+:root {
+  --cerie-blue: #0077ff;
+  --cerie-blue-dark: #0050c8;
+  --cerie-gold: #ffcc00;
+}
+
+/* Titres principaux H2 de sections */
+.section h2,
+#faq h2,
+#mentions-legales h2 {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto 28px auto;
+  padding: 8px 26px;
+  border-radius: 999px; /* encadrement arrondi */
+  text-align: center;
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: none;
+
+  /* Gradient léger derrière le h2 */
+  background: linear-gradient(135deg, rgba(0,119,255,0.09), rgba(0,80,200,0.18));
+  border: 1px solid rgba(0,119,255,0.35);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+
+  /* Couleur du texte */
+  color: #111827;
+
+  /* Animation d’apparition */
+  opacity: 0;
+  transform: translateY(8px);
+  animation: cerieTitleFadeUp 0.7s ease-out forwards;
+}
+
+/* Centrage global du conteneur de titre */
+.section,
+.section .container {
+  text-align: center;
+}
+
+/* Ligne décorative sous chaque titre */
+.section h2::after,
+#faq h2::after,
+#mentions-legales h2::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  margin: 10px auto 0 auto;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--cerie-blue), var(--cerie-gold));
+}
+
+/* Sous-titres type .section-sub & h3 */
+.section .section-sub,
+.section h3 {
+  text-align: center;
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-weight: 500;
+  margin: 0 auto 18px auto;
+  max-width: 900px;
+}
+
+/* Petite variante pour les sous-titres FAQ */
+#faq h3 {
+  font-size: 1.05rem;
+  margin-top: 24px;
+}
+
+/* Animation des titres */
+@keyframes cerieTitleFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 
