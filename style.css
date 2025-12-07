@@ -607,5 +607,34 @@ body {
   display: block;
   margin: 16px auto 0;  /* auto à gauche/droite = centré */
 }
+/* Centrage propre de la bannière (hero) */
+.hero {
+  text-align: center;
+}
+
+.hero .hero-content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Titre de la bannière */
+.hero h2 {
+  margin-bottom: 18px;
+}
+
+/* Texte sous le titre */
+.hero .hero-text {
+  margin: 0 auto 20px auto;
+  max-width: 900px;
+}
+
+/* Boutons de la bannière bien centrés */
+.hero .hero-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
 
 
